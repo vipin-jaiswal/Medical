@@ -1,0 +1,1 @@
+streamlit run c:/Users/DELL.DESKTOP-H6V1ATR/OneDrive/Desktop/MULTIPLEDISEASE/datamodels/app.py
