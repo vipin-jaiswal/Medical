@@ -28,6 +28,7 @@ with st.sidebar:
                             'Heart Disease Prediction',
                             'Parkinsons Prediction'],
                            menu_icon='hospital-fill',
+                           
                            icons=['activity', 'heart', 'person'],
                            default_index=0)
 
@@ -97,6 +98,7 @@ if selected == 'Heart Disease Prediction':
 
     with col1:
         age = st.text_input('Age')
+        
 
     with col2:
         sex = st.text_input('Sex')
