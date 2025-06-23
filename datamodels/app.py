@@ -14,9 +14,9 @@ working_dir = os.path.dirname(os.path.abspath(__file__))
 
 # loading the saved models
 
-diabetes_model = pickle.load(open(r'C:\Users\DELL.DESKTOP-H6V1ATR\OneDrive\Desktop\MULTIPLEDISEASE\train_dataset\diabetes_model.sav', 'rb'))
-heart_disease_model = pickle.load(open(r'C:\Users\DELL.DESKTOP-H6V1ATR\OneDrive\Desktop\MULTIPLEDISEASE\train_dataset\heart_disease_model.sav', 'rb'))
-parkinsons_model = pickle.load(open(r'C:\Users\DELL.DESKTOP-H6V1ATR\OneDrive\Desktop\MULTIPLEDISEASE\train_dataset\parkinsons_model.sav', 'rb'))
+# diabetes_model = pickle.load(open(r'C:\Users\DELL.DESKTOP-H6V1ATR\OneDrive\Desktop\MULTIPLEDISEASE\train_dataset\diabetes_model.sav', 'rb'))
+# heart_disease_model = pickle.load(open(r'C:\Users\DELL.DESKTOP-H6V1ATR\OneDrive\Desktop\MULTIPLEDISEASE\train_dataset\heart_disease_model.sav', 'rb'))
+# parkinsons_model = pickle.load(open(r'C:\Users\DELL.DESKTOP-H6V1ATR\OneDrive\Desktop\MULTIPLEDISEASE\train_dataset\parkinsons_model.sav', 'rb'))
 
 
 # sidebar for navigation
