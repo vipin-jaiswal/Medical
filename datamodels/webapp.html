@@ -10,24 +10,37 @@
     <title>MULTIPLE DISEASE</title>
 </head>
 
-<body class="max-w-screen h-screen  bg-gradient-to-br from-red-100 via-amber-100 to-blue-100 ">
+<body class="max-w-screen h-screen  bg-gradient-to-br from-pink-50 via-green-50 to-blue-50 ">
     <NAV></NAV>
-    <main class="flex "> 
+    <main class="flex  ">
         <!-- sidebar -->
-        <div class="w-[20%]  mt-20   p-8">
-          <i class="fa-solid fa-angles-right text-2xl float-end  "></i>
-          <div  class=" mt-20" >
-            <p class="text-2xl font-bold "> MULTIPLE DISEASE Prediction System</p>
+        <div class="border">
+            <div class="  mt-20 text-center p-4">
+                <i class="fa-solid fa-angles-right text-2xl float-end " onclick="handlesidebar()"></i>
+                <div id="sidebar" class=" hidden">
+                    <div class="mt-20">
+                        <p class="text-xl font-semibold "> <i class="fa-solid fa-hospital"></i>
+                            MULTIPLE DISEASE Prediction System</p>
+                    </div>
+                    <div class="mt-5 font-medium flex flex-col gap-5">
+                        <div  class="border rounded bg-blue-200 hover:opacity-60 cursor-pointer " onclick="diseasetype1()"> Diabetes
+                            Prediction</div>
+                        <div  class="border rounded bg-blue-200 hover:opacity-60 cursor-pointer"onclick="diseasetype2()"> 
+                            Prediction</div>
+                        <div  class="border rounded bg-blue-200 hover:opacity-60 cursor-pointer"onclick="diseasetype3()"> par
+                            Prediction</div>
 
-          </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- pages -->
-        <div class="w-[80%]">
+        <div class=" flex flex-col h-full  items-center w-full ">
             <!-- page1 -->
-            <div class="mt-20 flex flex-col px-20  gap-10">
+            <div id="page1" class="mt-10 flex flex-col p-10 hidden  items-center text-center">
                 <h1 class="  flex text-4xl font-bold ">Diabetes Prediction </h1>
-                <form class="p-5 mt-5 flex flex-col gap-10 " action="">
-                    <div class="flex justify-around items-center text-center ">
+                <form class="p-2 mt-5 flex flex-col gap-10 items-center text-center" action="">
+                    <div class="flex justify-around items-center text-center  gap-5">
                         <div class="flex flex-col gap-3">
                             <label class="text-xl font-semibold" for="">Number of Pregnancies </label>
                             <input class="border text-center   p-2 bg-gray-300 hover:opacity-50  "
@@ -36,36 +49,36 @@
                         <div class="flex flex-col gap-3">
                             <label class="text-xl font-semibold" for="">Glucose Level </label>
                             <input class="border text-center   p-2 bg-gray-300 hover:opacity-50 "
-                                placeholder="Enter number" type="number">
+                                placeholder="Enter number" type="text">
                         </div>
                         <div class="flex flex-col gap-3">
                             <label class="text-xl font-semibold" for="">Blood Pressure value </label>
                             <input class="border text-center   p-2 bg-gray-300 hover:opacity-50 "
-                                placeholder="Enter number" type="number">
+                                placeholder="Enter number" type="text">
                         </div>
                     </div>
-                    <div class="flex justify-around items-center text-center ">
+                    <div class="flex justify-around items-center text-center gap-5 ">
                         <div class="flex flex-col gap-3">
                             <label class="text-xl font-semibold" for="">Skin Thickness value </label>
                             <input class="border text-center   p-2 bg-gray-300 hover:opacity-50  "
-                                placeholder="Enter number" type="number">
+                                placeholder="Enter number" type="text">
                         </div>
                         <div class="flex flex-col gap-3">
                             <label class="text-xl font-semibold" for="">Insulin Level </label>
                             <input class="border text-center   p-2 bg-gray-300 hover:opacity-50 "
-                                placeholder="Enter number" type="number">
+                                placeholder="Enter number" type="text">
                         </div>
                         <div class="flex flex-col gap-3">
                             <label class="text-xl font-semibold" for="">BMI value </label>
                             <input class="border text-center  p-2 bg-gray-300 hover:opacity-50  "
-                                placeholder="Enter number" type="number">
+                                placeholder="Enter number" type="text">
                         </div>
                     </div>
-                    <div class="flex px-16 gap-30 items-center text-center ">
+                    <div class="flex  gap-5 items-center text-center  ">
                         <div class="flex flex-col gap-3">
                             <label class="text-xl font-semibold" for="">Diabetes Pedigree Function value </label>
                             <input class="border text-center   p-2 bg-gray-300 hover:opacity-50  "
-                                placeholder="Enter number" type="number">
+                                placeholder="Enter number" type="text">
                         </div>
                         <div class="flex flex-col gap-3">
                             <label class="text-xl font-semibold" for="">Age of the Person </label>
@@ -76,130 +89,133 @@
                     </div>
 
                     <div class="px-16">
-                        <button class="flex  border items-center bg-green-300 w-fit p-2 px-4 "> Diabetes Test
+                        <button class="flex  border items-center bg-green-300 w-fit p-2 px-4 " type="submit"> Diabetes
+                            Test
                             Result</button>
                     </div>
                 </form>
             </div>
             <!-- page2 -->
-            <div class="mt-20 flex flex-col hidden px-20 px-10 gap-10">
-                <h1 class="  flex text-4xl font-bold ">Diabetes Prediction </h1>
-                <form class="p-5 mt-5 flex flex-col gap-10 " action="">
-                    <div class="flex justify-around items-center text-center ">
+            <div id="page2" class="mt-10 flex flex-col p-10 hidden  items-center text-center">
+                <h1 class="  flex text-4xl font-bold "> Prediction </h1>
+                <form class="p-2 mt-5 flex flex-col gap-10 items-center text-center" action="">
+                    <div class="flex justify-around items-center text-center  gap-5">
                         <div class="flex flex-col gap-3">
                             <label class="text-xl font-semibold" for="">Number of Pregnancies </label>
-                            <input class="border text-center w-72  p-2 bg-gray-300 hover:opacity-50  "
+                            <input class="border text-center   p-2 bg-gray-300 hover:opacity-50  "
                                 placeholder="Enter number" type="number">
                         </div>
                         <div class="flex flex-col gap-3">
                             <label class="text-xl font-semibold" for="">Glucose Level </label>
-                            <input class="border text-center w-72  p-2 bg-gray-300 hover:opacity-50 "
-                                placeholder="Enter number" type="number">
+                            <input class="border text-center   p-2 bg-gray-300 hover:opacity-50 "
+                                placeholder="Enter number" type="text">
                         </div>
                         <div class="flex flex-col gap-3">
                             <label class="text-xl font-semibold" for="">Blood Pressure value </label>
-                            <input class="border text-center w-72  p-2 bg-gray-300 hover:opacity-50 "
-                                placeholder="Enter number" type="number">
+                            <input class="border text-center   p-2 bg-gray-300 hover:opacity-50 "
+                                placeholder="Enter number" type="text">
                         </div>
                     </div>
-                    <div class="flex justify-around items-center text-center ">
+                    <div class="flex justify-around items-center text-center gap-5 ">
                         <div class="flex flex-col gap-3">
                             <label class="text-xl font-semibold" for="">Skin Thickness value </label>
-                            <input class="border text-center w-72  p-2 bg-gray-300 hover:opacity-50  "
-                                placeholder="Enter number" type="number">
+                            <input class="border text-center   p-2 bg-gray-300 hover:opacity-50  "
+                                placeholder="Enter number" type="text">
                         </div>
                         <div class="flex flex-col gap-3">
                             <label class="text-xl font-semibold" for="">Insulin Level </label>
-                            <input class="border text-center w-72  p-2 bg-gray-300 hover:opacity-50 "
-                                placeholder="Enter number" type="number">
+                            <input class="border text-center   p-2 bg-gray-300 hover:opacity-50 "
+                                placeholder="Enter number" type="text">
                         </div>
                         <div class="flex flex-col gap-3">
                             <label class="text-xl font-semibold" for="">BMI value </label>
-                            <input class="border text-center w-72 p-2 bg-gray-300 hover:opacity-50  "
-                                placeholder="Enter number" type="number">
+                            <input class="border text-center  p-2 bg-gray-300 hover:opacity-50  "
+                                placeholder="Enter number" type="text">
                         </div>
                     </div>
-                    <div class="flex px-16 gap-30 items-center text-center ">
+                    <div class="flex  gap-5 items-center text-center  ">
                         <div class="flex flex-col gap-3">
                             <label class="text-xl font-semibold" for="">Diabetes Pedigree Function value </label>
-                            <input class="border text-center w-72  p-2 bg-gray-300 hover:opacity-50  "
-                                placeholder="Enter number" type="number">
+                            <input class="border text-center   p-2 bg-gray-300 hover:opacity-50  "
+                                placeholder="Enter number" type="text">
                         </div>
                         <div class="flex flex-col gap-3">
                             <label class="text-xl font-semibold" for="">Age of the Person </label>
-                            <input class="border text-center w-72  p-2 bg-gray-300 hover:opacity-50  "
+                            <input class="border text-center   p-2 bg-gray-300 hover:opacity-50  "
                                 placeholder="Enter number" type="number">
                         </div>
 
                     </div>
 
                     <div class="px-16">
-                        <button class="flex  border items-center bg-green-300 w-fit p-2 px-4 "> Diabetes Test
+                        <button class="flex  border items-center bg-green-300 w-fit p-2 px-4 " type="submit"> Diabetes
+                            Test
                             Result</button>
                     </div>
                 </form>
             </div>
             <!-- page-3 -->
-            <div class="mt-20 flex flex-col hidden px-20 px-10 gap-10">
-                <h1 class="  flex text-4xl font-bold ">Diabetes Prediction </h1>
-                <form class="p-5 mt-5 flex flex-col gap-10 " action="">
-                    <div class="flex justify-around items-center text-center ">
+            <div id="pag3" class="mt-10 flex flex-col p-10  items-center text-center">
+                <h1 class="  flex text-4xl font-bold ">par Prediction </h1>
+                <form class="p-2 mt-5 flex flex-col gap-10 items-center text-center" action="">
+                    <div class="flex justify-around items-center text-center  gap-5">
                         <div class="flex flex-col gap-3">
                             <label class="text-xl font-semibold" for="">Number of Pregnancies </label>
-                            <input class="border text-center w-72  p-2 bg-gray-300 hover:opacity-50  "
+                            <input class="border text-center   p-2 bg-gray-300 hover:opacity-50  "
                                 placeholder="Enter number" type="number">
                         </div>
                         <div class="flex flex-col gap-3">
                             <label class="text-xl font-semibold" for="">Glucose Level </label>
-                            <input class="border text-center w-72  p-2 bg-gray-300 hover:opacity-50 "
-                                placeholder="Enter number" type="number">
+                            <input class="border text-center   p-2 bg-gray-300 hover:opacity-50 "
+                                placeholder="Enter number" type="text">
                         </div>
                         <div class="flex flex-col gap-3">
                             <label class="text-xl font-semibold" for="">Blood Pressure value </label>
-                            <input class="border text-center w-72  p-2 bg-gray-300 hover:opacity-50 "
-                                placeholder="Enter number" type="number">
+                            <input class="border text-center   p-2 bg-gray-300 hover:opacity-50 "
+                                placeholder="Enter number" type="text">
                         </div>
                     </div>
-                    <div class="flex justify-around items-center text-center ">
+                    <div class="flex justify-around items-center text-center gap-5 ">
                         <div class="flex flex-col gap-3">
                             <label class="text-xl font-semibold" for="">Skin Thickness value </label>
-                            <input class="border text-center w-72  p-2 bg-gray-300 hover:opacity-50  "
-                                placeholder="Enter number" type="number">
+                            <input class="border text-center   p-2 bg-gray-300 hover:opacity-50  "
+                                placeholder="Enter number" type="text">
                         </div>
                         <div class="flex flex-col gap-3">
                             <label class="text-xl font-semibold" for="">Insulin Level </label>
-                            <input class="border text-center w-72  p-2 bg-gray-300 hover:opacity-50 "
-                                placeholder="Enter number" type="number">
+                            <input class="border text-center   p-2 bg-gray-300 hover:opacity-50 "
+                                placeholder="Enter number" type="text">
                         </div>
                         <div class="flex flex-col gap-3">
                             <label class="text-xl font-semibold" for="">BMI value </label>
-                            <input class="border text-center w-72 p-2 bg-gray-300 hover:opacity-50  "
-                                placeholder="Enter number" type="number">
+                            <input class="border text-center  p-2 bg-gray-300 hover:opacity-50  "
+                                placeholder="Enter number" type="text">
                         </div>
                     </div>
-                    <div class="flex px-16 gap-30 items-center text-center ">
+                    <div class="flex  gap-5 items-center text-center  ">
                         <div class="flex flex-col gap-3">
                             <label class="text-xl font-semibold" for="">Diabetes Pedigree Function value </label>
-                            <input class="border text-center w-72  p-2 bg-gray-300 hover:opacity-50  "
-                                placeholder="Enter number" type="number">
+                            <input class="border text-center   p-2 bg-gray-300 hover:opacity-50  "
+                                placeholder="Enter number" type="text">
                         </div>
                         <div class="flex flex-col gap-3">
                             <label class="text-xl font-semibold" for="">Age of the Person </label>
-                            <input class="border text-center w-72  p-2 bg-gray-300 hover:opacity-50  "
+                            <input class="border text-center   p-2 bg-gray-300 hover:opacity-50  "
                                 placeholder="Enter number" type="number">
                         </div>
 
                     </div>
 
                     <div class="px-16">
-                        <button class="flex  border items-center bg-green-300 w-fit p-2 px-4 "> Diabetes Test
+                        <button class="flex  border items-center bg-green-300 w-fit p-2 px-4 " type="submit"> Diabetes
+                            Test
                             Result</button>
                     </div>
                 </form>
             </div>
         </div>
     </main>
-
+    <script src="./webapp.js"></script>
 </body>
 
 </html>
